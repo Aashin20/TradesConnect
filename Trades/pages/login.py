@@ -6,7 +6,7 @@ class LoginState(rx.State):
     email: str = ""
     password: str = ""
 
-    # Function to validate login
+    
     def validate_login(self):
             with rx.session() as session:
                 self.users = session.exec(

@@ -10,6 +10,7 @@
     "@babel/standalone": "7.25.3",
     "@emotion/react": "11.11.1",
     "@lottiefiles/dotlottie-react": "^0.9.1",
+    "@radix-ui/react-dialog": "1.0.5",
     "@radix-ui/react-form": "0.0.3",
     "@radix-ui/themes": "3.0.0",
     "axios": "1.6.0",
@@ -24,7 +25,8 @@
     "react-focus-lock": "2.11.3",
     "socket.io-client": "4.6.1",
     "sonner": "1.4.41",
-    "universal-cookie": "4.0.4"
+    "universal-cookie": "4.0.4",
+    "vaul": "^1.1.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",

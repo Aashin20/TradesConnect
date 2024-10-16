@@ -5,6 +5,8 @@ from reflex_lottiefiles import LottieFiles
 from rxconfig import config
 from .pages.login import login
 from .pages.signup import signup
+from .pages.find import find
+from .pages.dashboard import dashboard
 
 class State(rx.State):
     """The app state."""
@@ -124,12 +126,6 @@ def index() -> rx.Component:
             ),
         )
 
-
-
-def find():
-     return rx.box(
-          rx.text("Coming Soon!")
-     )
 
 def dashboard():
      return rx.box(

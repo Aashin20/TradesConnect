@@ -17,59 +17,6 @@ import NextHead from "next/head"
 const LottieFiles = dynamic(() => import('@lottiefiles/dotlottie-react').then((mod) => mod.DotLottieReact), { ssr: false });
 
 
-export function Button_daf78d61136b4c56943afe08c8413dc6 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_click_19763068cd8251a7d5dbe8da12b27d86 = useCallback(((...args) => ((addEvents([(Event("_redirect", ({ ["path"] : "/find/", ["external"] : false, ["replace"] : false })))], args, ({  }))))), [addEvents, Event])
-
-
-  return (
-    <RadixThemesButton color={"green"} onClick={on_click_19763068cd8251a7d5dbe8da12b27d86} size={"lg"}>
-  {"Looking for a Tradesman"}
-</RadixThemesButton>
-  )
-}
-
-                function Fallback({ error, resetErrorBoundary }) {
-                    return (
-                        <div>
-  <p>
-  {"Ooops...Unknown Reflex error has occured:"}
-</p>
-  <p css={({ ["color"] : "red" })}>
-  {error.message}
-</p>
-  <p>
-  {"Please contact the support."}
-</p>
-</div>
-                    );
-                }
-            
-
-export function Button_002b6e48c2c930c0399a5f5a5fe41241 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_click_a0c29feac3850ce4822ba178cde719bc = useCallback(((...args) => ((addEvents([(Event("_redirect", ({ ["path"] : "/login/", ["external"] : false, ["replace"] : false })))], args, ({  }))))), [addEvents, Event])
-
-
-  return (
-    <RadixThemesButton color={"blue"} onClick={on_click_a0c29feac3850ce4822ba178cde719bc} size={"lg"}>
-  {"I am a Tradesman"}
-</RadixThemesButton>
-  )
-}
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
 export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -79,24 +26,6 @@ export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
     <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
   <Fragment_e521b13e556da291bcec5187a783ea81/>
 </div>
-  )
-}
-
-export function Fragment_e521b13e556da291bcec5187a783ea81 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-  return (
-    <Fragment>
-  {isTrue((connectErrors.length > 0)) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
   )
 }
 
@@ -126,6 +55,77 @@ export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
 
   return (
     <Toaster closeButton={false} expand={true} position={"bottom-right"} richColors={true} theme={resolvedColorMode}/>
+  )
+}
+
+                function Fallback({ error, resetErrorBoundary }) {
+                    return (
+                        <div>
+  <p>
+  {"Ooops...Unknown Reflex error has occured:"}
+</p>
+  <p css={({ ["color"] : "red" })}>
+  {error.message}
+</p>
+  <p>
+  {"Please contact the support."}
+</p>
+</div>
+                    );
+                }
+            
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Button_002b6e48c2c930c0399a5f5a5fe41241 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_click_a0c29feac3850ce4822ba178cde719bc = useCallback(((...args) => ((addEvents([(Event("_redirect", ({ ["path"] : "/login/", ["external"] : false, ["replace"] : false })))], args, ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesButton color={"blue"} onClick={on_click_a0c29feac3850ce4822ba178cde719bc} size={"lg"}>
+  {"I am a Tradesman"}
+</RadixThemesButton>
+  )
+}
+
+export function Fragment_e521b13e556da291bcec5187a783ea81 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+  return (
+    <Fragment>
+  {isTrue((connectErrors.length > 0)) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Button_daf78d61136b4c56943afe08c8413dc6 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_click_19763068cd8251a7d5dbe8da12b27d86 = useCallback(((...args) => ((addEvents([(Event("_redirect", ({ ["path"] : "/find/", ["external"] : false, ["replace"] : false })))], args, ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesButton color={"green"} onClick={on_click_19763068cd8251a7d5dbe8da12b27d86} size={"lg"}>
+  {"Looking for a Tradesman"}
+</RadixThemesButton>
   )
 }
 
