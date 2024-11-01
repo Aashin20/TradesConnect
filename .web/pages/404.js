@@ -14,18 +14,6 @@ import NextHead from "next/head"
 
 
 
-export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-  return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-  <Fragment_e521b13e556da291bcec5187a783ea81/>
-</div>
-  )
-}
-
 export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -43,16 +31,6 @@ export function Fragment_e521b13e556da291bcec5187a783ea81 () {
 </Fragment>
   )
 }
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
 
 export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
   const { resolvedColorMode } = useContext(ColorModeContext)
@@ -80,6 +58,28 @@ export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
 
   return (
     <Toaster closeButton={false} expand={true} position={"bottom-right"} richColors={true} theme={resolvedColorMode}/>
+  )
+}
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+  return (
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+  <Fragment_e521b13e556da291bcec5187a783ea81/>
+</div>
   )
 }
 

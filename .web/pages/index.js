@@ -34,15 +34,21 @@ const LottieFiles = dynamic(() => import('@lottiefiles/dotlottie-react').then((m
                 }
             
 
-export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
 
   return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-  <Fragment_e521b13e556da291bcec5187a783ea81/>
-</div>
+    <Fragment>
+  {isTrue((connectErrors.length > 0)) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
   )
 }
 
@@ -75,34 +81,6 @@ export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
   )
 }
 
-export function Fragment_e521b13e556da291bcec5187a783ea81 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-  return (
-    <Fragment>
-  {isTrue((connectErrors.length > 0)) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
-  )
-}
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
 export function Button_daf78d61136b4c56943afe08c8413dc6 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -116,6 +94,16 @@ export function Button_daf78d61136b4c56943afe08c8413dc6 () {
   )
 }
 
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
 export function Button_002b6e48c2c930c0399a5f5a5fe41241 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -126,6 +114,18 @@ export function Button_002b6e48c2c930c0399a5f5a5fe41241 () {
     <RadixThemesButton color={"blue"} onClick={on_click_a0c29feac3850ce4822ba178cde719bc} size={"lg"}>
   {"I am a Tradesman"}
 </RadixThemesButton>
+  )
+}
+
+export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+  return (
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+  <Fragment_e521b13e556da291bcec5187a783ea81/>
+</div>
   )
 }
 
