@@ -1,5 +1,7 @@
 import reflex as rx
 
+
+
 def sidebar()->rx.Component:
     return rx.card(
         rx.vstack(
@@ -26,17 +28,19 @@ def sidebar()->rx.Component:
                      width="100%",),
                      spacing="2",
             ),
-            
+            rx.spacer(height="1em"),
             rx.vstack(
                 rx.text("Choose a Profession",size="3",
                                 weight="medium",
                                 text_align="left",
                                 width="100%"),
                 rx.select(["Plumber", "Electrician", "Carpenter", "Painter", "Mechanic"],size="3",width="100%",),
-            spacing="2",)
+            spacing="2",),
+            rx.spacer(height="1em"),
+            rx.button("Filter",type="submit"),
         ),spacing="5",),
         
-        spacing="5",
+        spacing="10",
         padding_x="1em",
         padding_y="1.5em",
         

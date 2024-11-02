@@ -9,7 +9,7 @@ import { WifiOffIcon as LucideWifiOffIcon } from "lucide-react"
 import { keyframes } from "@emotion/react"
 import { toast, Toaster } from "sonner"
 import env from "/env.json"
-import { Card as RadixThemesCard, Flex as RadixThemesFlex, Heading as RadixThemesHeading, Select as RadixThemesSelect, Text as RadixThemesText, TextField as RadixThemesTextField } from "@radix-ui/themes"
+import { Button as RadixThemesButton, Card as RadixThemesCard, Flex as RadixThemesFlex, Heading as RadixThemesHeading, Select as RadixThemesSelect, Text as RadixThemesText, TextField as RadixThemesTextField } from "@radix-ui/themes"
 import { Root as RadixFormRoot } from "@radix-ui/react-form"
 import NextHead from "next/head"
 
@@ -32,21 +32,15 @@ import NextHead from "next/head"
                 }
             
 
-export function Fragment_e521b13e556da291bcec5187a783ea81 () {
+export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
 
   return (
-    <Fragment>
-  {isTrue((connectErrors.length > 0)) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+  <Fragment_e521b13e556da291bcec5187a783ea81/>
+</div>
   )
 }
 
@@ -79,7 +73,17 @@ export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
   )
 }
 
-export function Root_90f2a4c388b4a826799f42b8ee53f76f () {
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Root_2f263921cb0df5db2a23824e4d5a904a () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
@@ -105,6 +109,7 @@ export function Root_90f2a4c388b4a826799f42b8ee53f76f () {
 </RadixThemesText>
   <RadixThemesTextField.Root css={({ ["width"] : "100%" })} placeholder={"Enter your location"} size={"3"} type={"text"}/>
 </RadixThemesFlex>
+  <RadixThemesFlex css={({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch", ["height"] : "1em" })}/>
   <RadixThemesFlex align={"start"} className={"rx-Stack"} direction={"column"} gap={"2"}>
   <RadixThemesText as={"p"} css={({ ["textAlign"] : "left", ["width"] : "100%" })} size={"3"} weight={"medium"}>
   {"Choose a Profession"}
@@ -133,29 +138,29 @@ export function Root_90f2a4c388b4a826799f42b8ee53f76f () {
 </RadixThemesSelect.Content>
 </RadixThemesSelect.Root>
 </RadixThemesFlex>
+  <RadixThemesFlex css={({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch", ["height"] : "1em" })}/>
+  <RadixThemesButton type={"submit"}>
+  {"Filter"}
+</RadixThemesButton>
 </RadixFormRoot>
   )
 }
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
-export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
 
   return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-  <Fragment_e521b13e556da291bcec5187a783ea81/>
-</div>
+    <Fragment>
+  {isTrue((connectErrors.length > 0)) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
   )
 }
 
@@ -177,7 +182,7 @@ export default function Component() {
   <Div_24a2e81d0c5d3cb5b5f786fdef44e514/>
   <Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d/>
 </Fragment>
-  <RadixThemesCard css={({ ["spacing"] : "5", ["paddingInlineStart"] : "1em", ["paddingInlineEnd"] : "1em", ["paddingTop"] : "1.5em", ["paddingBottom"] : "1.5em", ["align"] : "start", ["height"] : "800px", ["width"] : "20em" })}>
+  <RadixThemesCard css={({ ["spacing"] : "10", ["paddingInlineStart"] : "1em", ["paddingInlineEnd"] : "1em", ["paddingTop"] : "1.5em", ["paddingBottom"] : "1.5em", ["align"] : "start", ["height"] : "800px", ["width"] : "20em" })}>
   <RadixThemesFlex align={"start"} className={"rx-Stack"} direction={"column"} gap={"5"}>
   <RadixThemesFlex align={"start"} className={"rx-Stack"} direction={"row"} gap={"3"}>
   <img css={({ ["width"] : "2.5em", ["height"] : "auto", ["borderRadius"] : "25%" })} src={"/logo.png"}/>
@@ -185,7 +190,7 @@ export default function Component() {
   {"Find Tradesmen near you!"}
 </RadixThemesHeading>
 </RadixThemesFlex>
-  <Root_90f2a4c388b4a826799f42b8ee53f76f/>
+  <Root_2f263921cb0df5db2a23824e4d5a904a/>
 </RadixThemesFlex>
 </RadixThemesCard>
   <NextHead>

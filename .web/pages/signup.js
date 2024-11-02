@@ -15,16 +15,22 @@ import NextHead from "next/head"
 
 
 
-export function Textfield__root_b4ca1fc79587770a592149c148ee9bb7 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_change_3ac373d4639ce7f2e4f7100821f5e8bf = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "location", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
-
-
-  return (
-    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_3ac373d4639ce7f2e4f7100821f5e8bf} placeholder={"Location"} required={true} size={"3"}/>
-  )
-}
+                function Fallback({ error, resetErrorBoundary }) {
+                    return (
+                        <div>
+  <p>
+  {"Ooops...Unknown Reflex error has occured:"}
+</p>
+  <p css={({ ["color"] : "red" })}>
+  {error.message}
+</p>
+  <p>
+  {"Please contact the support."}
+</p>
+</div>
+                    );
+                }
+            
 
 export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
   const { resolvedColorMode } = useContext(ColorModeContext)
@@ -55,14 +61,47 @@ export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
   )
 }
 
-export function Textfield__root_7c44c63eba93982b572efea97c2ce3d8 () {
+export function Select__root_7703bebb3bd38ef0a68181a6ab94bff5 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
-  const on_change_e8f7fd7b840fd680c29a36b6654ac40e = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "email", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
+  const on_change_f235631302de2b9d5922a10fe5ccd5fc = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "profession", ["value"] : _e0 })))], [_e0], ({  }))))), [addEvents, Event])
 
 
   return (
-    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_e8f7fd7b840fd680c29a36b6654ac40e} placeholder={"Enter your Email"} required={true} size={"3"} type={"email"}/>
+    <RadixThemesSelect.Root onValueChange={on_change_f235631302de2b9d5922a10fe5ccd5fc} required={true} size={"3"}>
+  <RadixThemesSelect.Trigger css={({ ["width"] : "100%" })}/>
+  <RadixThemesSelect.Content>
+  <RadixThemesSelect.Group>
+  {""}
+  <RadixThemesSelect.Item value={"Plumber"}>
+  {"Plumber"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Electrician"}>
+  {"Electrician"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Carpenter"}>
+  {"Carpenter"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Painter"}>
+  {"Painter"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Mechanic"}>
+  {"Mechanic"}
+</RadixThemesSelect.Item>
+</RadixThemesSelect.Group>
+</RadixThemesSelect.Content>
+</RadixThemesSelect.Root>
+  )
+}
+
+export function Textfield__root_e120494c72ca81918defc9f23fbb28ae () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_change_1fc85d5983c1cb86b761cef045f9e6bc = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "name", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_1fc85d5983c1cb86b761cef045f9e6bc} placeholder={"Enter your Name"} required={true} size={"3"}/>
   )
 }
 
@@ -131,34 +170,6 @@ export function Root_43a8a50bcccb2c6837613f02cf93128c () {
   )
 }
 
-export function Textfield__root_48fa06bd8f684fc43b85fb303c053258 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_change_7f83a8ab86f7313e3fc02973cd7f1e62 = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "password", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
-
-
-  return (
-    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_7f83a8ab86f7313e3fc02973cd7f1e62} placeholder={"Password"} required={true} size={"3"} type={"password"}/>
-  )
-}
-
-                function Fallback({ error, resetErrorBoundary }) {
-                    return (
-                        <div>
-  <p>
-  {"Ooops...Unknown Reflex error has occured:"}
-</p>
-  <p css={({ ["color"] : "red" })}>
-  {error.message}
-</p>
-  <p>
-  {"Please contact the support."}
-</p>
-</div>
-                    );
-                }
-            
-
 export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -177,24 +188,26 @@ export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   )
 }
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
-export function Textfield__root_e120494c72ca81918defc9f23fbb28ae () {
+export function Textfield__root_7c44c63eba93982b572efea97c2ce3d8 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
-  const on_change_1fc85d5983c1cb86b761cef045f9e6bc = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "name", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
+  const on_change_e8f7fd7b840fd680c29a36b6654ac40e = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "email", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
 
 
   return (
-    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_1fc85d5983c1cb86b761cef045f9e6bc} placeholder={"Enter your Name"} required={true} size={"3"}/>
+    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_e8f7fd7b840fd680c29a36b6654ac40e} placeholder={"Enter your Email"} required={true} size={"3"} type={"email"}/>
+  )
+}
+
+export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+  return (
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+  <Fragment_e521b13e556da291bcec5187a783ea81/>
+</div>
   )
 }
 
@@ -211,48 +224,14 @@ export function Button_382df5e42ec6ff6ad357aca35b36a437 () {
   )
 }
 
-export function Select__root_7703bebb3bd38ef0a68181a6ab94bff5 () {
+export function Textfield__root_48fa06bd8f684fc43b85fb303c053258 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
-  const on_change_f235631302de2b9d5922a10fe5ccd5fc = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "profession", ["value"] : _e0 })))], [_e0], ({  }))))), [addEvents, Event])
+  const on_change_7f83a8ab86f7313e3fc02973cd7f1e62 = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "password", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
 
 
   return (
-    <RadixThemesSelect.Root onValueChange={on_change_f235631302de2b9d5922a10fe5ccd5fc} required={true} size={"3"}>
-  <RadixThemesSelect.Trigger css={({ ["width"] : "100%" })}/>
-  <RadixThemesSelect.Content>
-  <RadixThemesSelect.Group>
-  {""}
-  <RadixThemesSelect.Item value={"Plumber"}>
-  {"Plumber"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Electrician"}>
-  {"Electrician"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Carpenter"}>
-  {"Carpenter"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Painter"}>
-  {"Painter"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Mechanic"}>
-  {"Mechanic"}
-</RadixThemesSelect.Item>
-</RadixThemesSelect.Group>
-</RadixThemesSelect.Content>
-</RadixThemesSelect.Root>
-  )
-}
-
-export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-  return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-  <Fragment_e521b13e556da291bcec5187a783ea81/>
-</div>
+    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_7f83a8ab86f7313e3fc02973cd7f1e62} placeholder={"Password"} required={true} size={"3"} type={"password"}/>
   )
 }
 
@@ -264,6 +243,27 @@ export function Textfield__root_4113a259f169dee2b03bb28860c03eb2 () {
 
   return (
     <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_24f079985eb3e3f0d3489f0c8d9534ec} placeholder={"Enter your Phone Number"} required={true} size={"3"} type={"number"}/>
+  )
+}
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Textfield__root_b4ca1fc79587770a592149c148ee9bb7 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_change_3ac373d4639ce7f2e4f7100821f5e8bf = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___signup____signup_form_state.update_form", ({ ["field"] : "location", ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_3ac373d4639ce7f2e4f7100821f5e8bf} placeholder={"Location"} required={true} size={"3"}/>
   )
 }
 
