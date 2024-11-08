@@ -15,32 +15,32 @@ import NextHead from "next/head"
 
 
 
-                function Fallback({ error, resetErrorBoundary }) {
-                    return (
-                        <div>
-  <p>
-  {"Ooops...Unknown Reflex error has occured:"}
-</p>
-  <p css={({ ["color"] : "red" })}>
-  {error.message}
-</p>
-  <p>
-  {"Please contact the support."}
-</p>
-</div>
-                    );
-                }
-            
-
-export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
 
   return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-  <Fragment_e521b13e556da291bcec5187a783ea81/>
-</div>
+    <Fragment>
+  {isTrue((connectErrors.length > 0)) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Textfield__root_244b5e78ee3062b5a8c883afe057b153 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_change_3b47a16ef92465b86b75e4f0044055a8 = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___login____login_state.set_email", ({ ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_3b47a16ef92465b86b75e4f0044055a8} placeholder={"Enter your email"} size={"3"} type={"email"}/>
   )
 }
 
@@ -73,6 +73,18 @@ export function Toaster_9d6e054b03c6e5d1bea1c0a5576b4e6d () {
   )
 }
 
+export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+  return (
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+  <Fragment_e521b13e556da291bcec5187a783ea81/>
+</div>
+  )
+}
+
 export function Textfield__root_7a4c9436ed144cd98b023b70c8df66f2 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -81,45 +93,6 @@ export function Textfield__root_7a4c9436ed144cd98b023b70c8df66f2 () {
 
   return (
     <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_9efe60e1534e1d9347bbd02286df2659} placeholder={"Enter your password"} size={"3"} type={"password"}/>
-  )
-}
-
-export function Textfield__root_244b5e78ee3062b5a8c883afe057b153 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_change_3b47a16ef92465b86b75e4f0044055a8 = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___login____login_state.set_email", ({ ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
-
-
-  return (
-    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_3b47a16ef92465b86b75e4f0044055a8} placeholder={"Enter your email"} size={"3"} type={"email"}/>
-  )
-}
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
-export function Fragment_e521b13e556da291bcec5187a783ea81 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-
-  return (
-    <Fragment>
-  {isTrue((connectErrors.length > 0)) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={({ ["color"] : "crimson", ["zIndex"] : 9999, ["position"] : "fixed", ["bottom"] : "33px", ["right"] : "33px", ["animation"] : (pulse+" 1s infinite") })} size={32}/>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
   )
 }
 
@@ -135,6 +108,33 @@ export function Button_622076c389b07b94db158feef8cbb3c6 () {
 </RadixThemesButton>
   )
 }
+
+                function Fallback({ error, resetErrorBoundary }) {
+                    return (
+                        <div>
+  <p>
+  {"Ooops...Unknown Reflex error has occured:"}
+</p>
+  <p css={({ ["color"] : "red" })}>
+  {error.message}
+</p>
+  <p>
+  {"Please contact the support."}
+</p>
+</div>
+                    );
+                }
+            
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
 
 export default function Component() {
   const [addEvents, connectErrors] = useContext(EventLoopContext);

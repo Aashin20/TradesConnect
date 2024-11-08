@@ -15,32 +15,49 @@ import NextHead from "next/head"
 
 
 
-                function Fallback({ error, resetErrorBoundary }) {
-                    return (
-                        <div>
-  <p>
-  {"Ooops...Unknown Reflex error has occured:"}
-</p>
-  <p css={({ ["color"] : "red" })}>
-  {error.message}
-</p>
-  <p>
-  {"Please contact the support."}
-</p>
-</div>
-                    );
-                }
-            
-
-export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+export function Button_f8bbf45145186b0712c2f0d2ddbe4aaf () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
+  const on_click_5b7e82e179d745657d47863f865135b6 = useCallback(((...args) => ((addEvents([(Event("reflex___state____state.trades___pages___find____filter_form_state.Filter", ({  })))], args, ({  }))))), [addEvents, Event])
 
 
   return (
-    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
-  <Fragment_e521b13e556da291bcec5187a783ea81/>
-</div>
+    <RadixThemesButton onClick={on_click_5b7e82e179d745657d47863f865135b6} type={"submit"}>
+  {"Filter"}
+</RadixThemesButton>
+  )
+}
+
+export function Select__root_dce490f125fca4a308bb6c94f8cc6764 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_change_cfc94a5ceb7a3933541b114deaacb6f5 = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___find____filter_form_state.set_profession", ({ ["value"] : _e0 })))], [_e0], ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesSelect.Root onValueChange={on_change_cfc94a5ceb7a3933541b114deaacb6f5} size={"3"}>
+  <RadixThemesSelect.Trigger css={({ ["width"] : "100%" })}/>
+  <RadixThemesSelect.Content>
+  <RadixThemesSelect.Group>
+  {""}
+  <RadixThemesSelect.Item value={"Plumber"}>
+  {"Plumber"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Electrician"}>
+  {"Electrician"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Carpenter"}>
+  {"Carpenter"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Painter"}>
+  {"Painter"}
+</RadixThemesSelect.Item>
+  <RadixThemesSelect.Item value={"Mechanic"}>
+  {"Mechanic"}
+</RadixThemesSelect.Item>
+</RadixThemesSelect.Group>
+</RadixThemesSelect.Content>
+</RadixThemesSelect.Root>
   )
 }
 
@@ -83,7 +100,7 @@ const pulse = keyframes`
 `
 
 
-export function Root_2f263921cb0df5db2a23824e4d5a904a () {
+export function Root_75882b51d6522f264acb61859a252d77 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
@@ -107,41 +124,17 @@ export function Root_2f263921cb0df5db2a23824e4d5a904a () {
   <RadixThemesText as={"p"} css={({ ["textAlign"] : "left", ["width"] : "100%" })} size={"3"} weight={"medium"}>
   {"Enter your Location"}
 </RadixThemesText>
-  <RadixThemesTextField.Root css={({ ["width"] : "100%" })} placeholder={"Enter your location"} size={"3"} type={"text"}/>
+  <Textfield__root_6fa6f6ec0908e28ca83f1e4e0b171672/>
 </RadixThemesFlex>
   <RadixThemesFlex css={({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch", ["height"] : "1em" })}/>
   <RadixThemesFlex align={"start"} className={"rx-Stack"} direction={"column"} gap={"2"}>
   <RadixThemesText as={"p"} css={({ ["textAlign"] : "left", ["width"] : "100%" })} size={"3"} weight={"medium"}>
   {"Choose a Profession"}
 </RadixThemesText>
-  <RadixThemesSelect.Root size={"3"}>
-  <RadixThemesSelect.Trigger css={({ ["width"] : "100%" })}/>
-  <RadixThemesSelect.Content>
-  <RadixThemesSelect.Group>
-  {""}
-  <RadixThemesSelect.Item value={"Plumber"}>
-  {"Plumber"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Electrician"}>
-  {"Electrician"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Carpenter"}>
-  {"Carpenter"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Painter"}>
-  {"Painter"}
-</RadixThemesSelect.Item>
-  <RadixThemesSelect.Item value={"Mechanic"}>
-  {"Mechanic"}
-</RadixThemesSelect.Item>
-</RadixThemesSelect.Group>
-</RadixThemesSelect.Content>
-</RadixThemesSelect.Root>
+  <Select__root_dce490f125fca4a308bb6c94f8cc6764/>
 </RadixThemesFlex>
   <RadixThemesFlex css={({ ["flex"] : 1, ["justifySelf"] : "stretch", ["alignSelf"] : "stretch", ["height"] : "1em" })}/>
-  <RadixThemesButton type={"submit"}>
-  {"Filter"}
-</RadixThemesButton>
+  <Button_f8bbf45145186b0712c2f0d2ddbe4aaf/>
 </RadixFormRoot>
   )
 }
@@ -161,6 +154,46 @@ export function Fragment_e521b13e556da291bcec5187a783ea81 () {
   <Fragment/>
 )}
 </Fragment>
+  )
+}
+
+export function Div_24a2e81d0c5d3cb5b5f786fdef44e514 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+
+  return (
+    <div css={({ ["position"] : "fixed", ["width"] : "100vw", ["height"] : "0" })} title={("Connection Error: "+((connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''))}>
+  <Fragment_e521b13e556da291bcec5187a783ea81/>
+</div>
+  )
+}
+
+                function Fallback({ error, resetErrorBoundary }) {
+                    return (
+                        <div>
+  <p>
+  {"Ooops...Unknown Reflex error has occured:"}
+</p>
+  <p css={({ ["color"] : "red" })}>
+  {error.message}
+</p>
+  <p>
+  {"Please contact the support."}
+</p>
+</div>
+                    );
+                }
+            
+
+export function Textfield__root_6fa6f6ec0908e28ca83f1e4e0b171672 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_change_5105523f4406526b9454784a5076c418 = useCallback(((_e0) => ((addEvents([(Event("reflex___state____state.trades___pages___find____filter_form_state.set_location", ({ ["value"] : _e0["target"]["value"] })))], [_e0], ({  }))))), [addEvents, Event])
+
+
+  return (
+    <RadixThemesTextField.Root css={({ ["width"] : "100%" })} onChange={on_change_5105523f4406526b9454784a5076c418} placeholder={"Enter your location"} size={"3"} type={"text"}/>
   )
 }
 
@@ -190,7 +223,7 @@ export default function Component() {
   {"Find Tradesmen near you!"}
 </RadixThemesHeading>
 </RadixThemesFlex>
-  <Root_2f263921cb0df5db2a23824e4d5a904a/>
+  <Root_75882b51d6522f264acb61859a252d77/>
 </RadixThemesFlex>
 </RadixThemesCard>
   <NextHead>
